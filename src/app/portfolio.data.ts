@@ -58,9 +58,9 @@ export const PROJECTS: Project[] = [
     shape: 'circle',
   },
   {
-    title: 'Login System',
-    desc: 'Responsive login interface with form handling and client-side validation.',
-    url: 'https://bassantezzat.github.io/login-system/',
+       title: 'AuthApp',
+    desc: 'Angular authentication system with validation, route guards, and a responsive animated UI.',
+    url: 'https://auth-app-liard-xi.vercel.app/login',
     shape: 'square',
   },
 ];
