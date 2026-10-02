@@ -14,7 +14,6 @@ export const PROFILE = {
   about: [
     'Recent Information Technology graduate from the Egyptian E-Learning University, in a joint program with Fayoum University.',
     'I work mainly with Angular, TypeScript and modern CSS, and I enjoy connecting interfaces to REST APIs.',
-    'I like clear structure, geometric shapes and simple layouts that feel calm and easy to use.',
     'Strong in OOP, databases and problem-solving, and comfortable leading a team.',
   ],
   email: 'bassantromilla@gmail.com',
