@@ -1,0 +1,181 @@
+<nav class="nav">
+  <div class="w nav-in">
+    <a class="logo" href="#top"><i></i>{{ profile.name }}</a>
+    <ul>
+      <li><a href="#about">about</a></li>
+      <li><a href="#work">work</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#edu">education</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <button
+      class="theme"
+      type="button"
+      (click)="toggleTheme()"
+      [attr.aria-label]="'Switch to ' + (theme() === 'light' ? 'dark' : 'light') + ' theme'"
+    >
+      @if (theme() === 'light') {
+        Dark
+      } @else {
+        Light
+      }
+    </button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="w hero-in">
+    <div>
+      <div class="tag">{{ profile.role }}</div>
+      <h1>{{ profile.first }}<br />{{ profile.last }}</h1>
+      <p class="lead">{{ profile.lead }}</p>
+      <div class="btns">
+        <a class="btn p" href="#work">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="photo art">
+      <img src="bassant.jpg" alt="Bassant Ezzat Farhat" width="400" height="400" />
+    </div>
+  </div>
+</header>
+
+<div class="w">
+  <div class="stats">
+    @for (s of stats; track s.label; let i = $index) {
+      <div reveal [revealDelay]="i * 100">
+        <b>{{ s.value }}</b
+        ><small>{{ s.label }}</small>
+      </div>
+    }
+  </div>
+</div>
+
+<section id="about">
+  <div class="w">
+    <div class="h" reveal>
+      <span>01</span>
+      <h2>About</h2>
+    </div>
+    <div class="about">
+      @for (p of profile.about; track p; let i = $index) {
+        <p reveal [revealDelay]="i * 100">{{ p }}</p>
+      }
+    </div>
+  </div>
+</section>
+
+<section id="work" class="tight">
+  <div class="w">
+    <div class="h" reveal>
+      <span>02</span>
+      <h2>Selected work</h2>
+    </div>
+
+    <article class="feat" reveal>
+      <div>
+        <div class="tag">{{ featured.tag }}</div>
+        <h3>{{ featured.title }}</h3>
+        <p>{{ featured.desc }}</p>
+        <ul class="chips">
+          @for (c of featured.stack; track c) {
+            <li>{{ c }}</li>
+          }
+        </ul>
+        <a class="btn p" [href]="featured.url" target="_blank" rel="noopener">Live demo →</a>
+      </div>
+      <ul class="f">
+        @for (f of featured.features; track f) {
+          <li>{{ f }}</li>
+        }
+      </ul>
+    </article>
+
+    <div class="grid3">
+      @for (p of projects; track p.title; let i = $index) {
+        <div class="card" reveal [revealDelay]="i * 120">
+          <svg class="sh" viewBox="0 0 44 44" aria-hidden="true">
+            @switch (p.shape) {
+              @case ('tri') {
+                <rect width="44" height="44" rx="10" fill="var(--acc2)" />
+                <path d="M10 30 L22 12 L34 30Z" fill="var(--bg)" />
+              }
+              @case ('circle') {
+                <rect width="44" height="44" rx="10" fill="var(--acc)" />
+                <circle cx="22" cy="22" r="10" fill="var(--bg)" />
+              }
+              @default {
+                <rect width="44" height="44" rx="10" fill="var(--ink)" />
+                <rect x="11" y="11" width="22" height="22" rx="4" fill="var(--bg)" />
+              }
+            }
+          </svg>
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.desc }}</p>
+          <a [href]="p.url" target="_blank" rel="noopener">Live demo →</a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="tight">
+  <div class="w">
+    <div class="h" reveal>
+      <span>03</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="sk">
+      @for (g of skills; track g.title; let i = $index) {
+        <div reveal [revealDelay]="i * 120">
+          <h4>{{ g.title }}</h4>
+          <p>{{ g.items.join(' · ') }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section id="edu" class="tight">
+  <div class="w">
+    <div class="h" reveal>
+      <span>04</span>
+      <h2>Education</h2>
+    </div>
+    <div class="tl">
+      <div reveal>
+        <h4>Degree</h4>
+        <div class="it">
+          <b>{{ degree.title }}</b
+          ><span>{{ degree.sub }}<br />{{ degree.note }}</span>
+        </div>
+      </div>
+      <div reveal [revealDelay]="150">
+        <h4>Certifications</h4>
+        @for (c of certs; track c.title) {
+          <div class="it">
+            <b>{{ c.title }}</b
+            ><span>{{ c.sub }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="tight">
+  <div class="w">
+    <div class="contact" reveal>
+      <h2>Let's build something together</h2>
+      <p>Open to frontend roles. Say hello, I reply fast.</p>
+      <div class="row">
+        <a [href]="profile.emailLink" target="_blank" rel="noopener">Email</a>
+        <a [href]="profile.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <a [href]="profile.github" target="_blank" rel="noopener">GitHub</a>
+        <a [href]="profile.whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© {{ year }} {{ profile.first }} {{ profile.last }} · Fayoum, Egypt</footer>
