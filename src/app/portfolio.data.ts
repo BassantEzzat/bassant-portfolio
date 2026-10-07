@@ -46,9 +46,9 @@ export const FEATURED = {
 
 export const PROJECTS: Project[] = [
   {
-    title: 'Angular Web App',
-    desc: 'Reusable, responsive, component-based interfaces built with Angular and TypeScript.',
-    url: 'https://angular-app-iota-two.vercel.app/#/home',
+    title: 'Central Finds',
+    desc: 'A modern and responsive e-commerce website built with Angular, featuring product browsing, wishlist, shopping cart, checkout, order placement, form validation, and a seamless shopping experience.',
+    url: 'https://central-finds.vercel.app/',
     shape: 'tri',
   },
   {
@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
     shape: 'circle',
   },
   {
-       title: 'AuthApp',
+    title: 'AuthApp',
     desc: 'Angular authentication system with validation, route guards, and a responsive animated UI.',
     url: 'https://auth-app-liard-xi.vercel.app/login',
     shape: 'square',
@@ -66,9 +66,36 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS = [
-  { title: 'Frontend', items: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS', 'Angular Material', 'Responsive Design'] },
-  { title: 'Engineering', items: ['OOP', 'REST APIs', 'Git & GitHub', 'Databases', 'Debugging', 'Cross-browser', 'Performance'] },
-  { title: 'Also learning', items: ['Java', 'C++', 'Python', 'Node.js', 'Backend fundamentals'] },
+  {
+    title: 'Frontend',
+    items: [
+      'Angular',
+      'TypeScript',
+      'JavaScript',
+      'HTML5',
+      'CSS3',
+      'Bootstrap',
+      'Tailwind CSS',
+      'Angular Material',
+      'Responsive Design',
+    ],
+  },
+  {
+    title: 'Engineering',
+    items: [
+      'OOP',
+      'REST APIs',
+      'Git & GitHub',
+      'Databases',
+      'Debugging',
+      'Cross-browser',
+      'Performance',
+    ],
+  },
+  {
+    title: 'Also learning',
+    items: ['Java', 'C++', 'Python', 'Node.js', 'Backend fundamentals'],
+  },
 ];
 
 export const DEGREE = {
@@ -78,7 +105,16 @@ export const DEGREE = {
 };
 
 export const CERTS = [
-  { title: 'Frontend Development Diploma', sub: 'Route IT Training Center · 2025' },
-  { title: 'Programming Fundamentals Diploma', sub: 'Route IT Training Center · 2024' },
-  { title: 'CCNAv7: Introduction to Networks', sub: 'Cisco Networking Academy · 2024' },
+  {
+    title: 'Frontend Development Diploma',
+    sub: 'Route IT Training Center · 2025',
+  },
+  {
+    title: 'Programming Fundamentals Diploma',
+    sub: 'Route IT Training Center · 2024',
+  },
+  {
+    title: 'CCNAv7: Introduction to Networks',
+    sub: 'Cisco Networking Academy · 2024',
+  },
 ];
