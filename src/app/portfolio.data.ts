@@ -33,24 +33,29 @@ export const STATS = [
 export const FEATURED = {
   tag: 'Graduation project · 2026',
   title: 'Voyago',
-  desc: 'A tourism management and trip planning platform that simplifies planning and booking a trip to Fayoum. I led the team and built the frontend.',
-  stack: ['Angular', 'TypeScript', 'Tailwind', 'Bootstrap', 'Angular Material', 'REST APIs'],
+  desc: 'A tourism management and trip planning platform that simplifies planning and booking a trip to Fayoum. I led the team, built the frontend, connected it to the backend team\'s real REST APIs, and deployed it on Vercel with Git & GitHub for team collaboration.',
+  stack: [
+    'Angular',
+    'TypeScript',
+    'Tailwind',
+    'Bootstrap',
+    'Angular Material',
+    'REST APIs',
+    'Git & GitHub',
+    'Vercel',
+  ],
   url: 'https://voyago-gamma.vercel.app/home',
   features: [
     'Hotels & restaurants',
     'Attractions & tour guides',
     'Bookings & payments',
     'Emergency services & budget planner',
+    'Integrated with real backend REST APIs',
+    'Team workflow on Git & GitHub, deployed on Vercel',
   ],
 };
 
 export const PROJECTS: Project[] = [
-  {
-    title: 'Central Finds',
-    desc: 'A modern and responsive e-commerce website built with Angular, featuring product browsing, wishlist, shopping cart, checkout, order placement, form validation, and a seamless shopping experience.',
-    url: 'https://central-finds.vercel.app/',
-    shape: 'tri',
-  },
   {
     title: 'Weather App',
     desc: 'Responsive weather app that pulls live data from an API and shows it in a friendly layout.',
