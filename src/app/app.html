@@ -73,88 +73,208 @@
       <h2>Selected work</h2>
     </div>
 
-    <article class="feat" reveal>
-      <div>
-        <div class="tag">{{ featured.tag }}</div>
-        <h3>{{ featured.title }}</h3>
-        <p>{{ featured.desc }}</p>
-        <ul class="chips">
-          @for (c of featured.stack; track c) {
-            <li>{{ c }}</li>
-          }
-        </ul>
-        <a class="btn p" [href]="featured.url" target="_blank" rel="noopener">Live demo →</a>
-      </div>
-      <ul class="f">
-        @for (f of featured.features; track f) {
-          <li>{{ f }}</li>
-        }
-      </ul>
-    </article>
+    <div class="show" reveal>
+      <input type="radio" name="proj" id="p1" checked />
+      <input type="radio" name="proj" id="p2" />
+      <input type="radio" name="proj" id="p3" />
+      <input type="radio" name="proj" id="p4" />
 
-    <article class="feat" reveal>
-      <div>
-        <div class="tag">E-Commerce Website</div>
-        <h3>Central Finds</h3>
-        <p>
-          A modern and responsive e-commerce website built with Angular, designed to provide a
-          smooth and user-friendly shopping experience. The project includes product browsing,
-          product details, wishlist and cart management, checkout flow, order confirmation, and
-          responsive layouts across different screen sizes.
-        </p>
-        <ul class="chips">
-          <li>Angular</li>
-          <li>TypeScript</li>
-          <li>HTML</li>
-          <li>SCSS</li>
-          <li>RxJS</li>
-          <li>Angular Router</li>
-          <li>REST API</li>
-          <li>Git &amp; GitHub</li>
-          <li>Vercel</li>
-        </ul>
-        <a class="btn p" href="https://central-finds.vercel.app/" target="_blank" rel="noopener"
-          >Live demo →</a
+      <div class="show-list" role="group" aria-label="Projects">
+        <label for="p1"
+          ><span class="n">01</span><b>Voyago</b><small>Graduation project</small></label
         >
+        <label for="p2"
+          ><span class="n">02</span><b>Central Finds</b><small>E-commerce</small></label
+        >
+        <label for="p3"
+          ><span class="n">03</span><b>Weather App</b><small>API project</small></label
+        >
+        <label for="p4"><span class="n">04</span><b>AuthApp</b><small>Authentication</small></label>
       </div>
-      <ul class="f f2">
-        <li>Product browsing and detailed product pages</li>
-        <li>Shopping cart with quantity management</li>
-        <li>Wishlist functionality</li>
-        <li>Checkout and order placement flow</li>
-        <li>Form validation and error handling</li>
-        <li>404 Not Found page</li>
-        <li>Responsive and modern UI</li>
-        <li>SEO-friendly page configuration</li>
-        <li>Angular routing and reusable components</li>
-        <li>Persistent cart, wishlist, and theme preferences</li>
-      </ul>
-    </article>
 
-    <div class="grid3">
-      @for (p of projects; track p.title; let i = $index) {
-        <div class="card" reveal [revealDelay]="i * 120">
-          <svg class="sh" viewBox="0 0 44 44" aria-hidden="true">
-            @switch (p.shape) {
-              @case ('tri') {
-                <rect width="44" height="44" rx="10" fill="var(--acc2)" />
-                <path d="M10 30 L22 12 L34 30Z" fill="var(--bg)" />
+      <div class="show-view">
+        <!-- 01 Voyago -->
+        <div class="pn pn1">
+          <div class="browser">
+            <div class="bar">
+              <i></i><i></i><i></i>
+              <span class="url">voyago-gamma.vercel.app</span>
+              <a [href]="featured.url" target="_blank" rel="noopener">Open ↗</a>
+            </div>
+            <div class="screen">
+              <iframe
+                src="https://voyago-gamma.vercel.app/home"
+                title="Voyago live preview"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="info">
+            <div>
+              <div class="tag">{{ featured.tag }}</div>
+              <h3>{{ featured.title }}</h3>
+              <p>{{ featured.desc }}</p>
+              <ul class="chips">
+                @for (c of featured.stack; track c) {
+                  <li>{{ c }}</li>
+                }
+              </ul>
+              <a class="btn p" [href]="featured.url" target="_blank" rel="noopener">Live demo →</a>
+            </div>
+            <ul class="feats">
+              @for (f of featured.features; track f) {
+                <li>{{ f }}</li>
               }
-              @case ('circle') {
-                <rect width="44" height="44" rx="10" fill="var(--acc)" />
-                <circle cx="22" cy="22" r="10" fill="var(--bg)" />
-              }
-              @default {
-                <rect width="44" height="44" rx="10" fill="var(--ink)" />
-                <rect x="11" y="11" width="22" height="22" rx="4" fill="var(--bg)" />
-              }
-            }
-          </svg>
-          <h3>{{ p.title }}</h3>
-          <p>{{ p.desc }}</p>
-          <a [href]="p.url" target="_blank" rel="noopener">Live demo →</a>
+            </ul>
+          </div>
         </div>
-      }
+
+        <!-- 02 Central Finds -->
+        <div class="pn pn2">
+          <div class="browser">
+            <div class="bar">
+              <i></i><i></i><i></i>
+              <span class="url">central-finds.vercel.app</span>
+              <a href="https://central-finds.vercel.app/" target="_blank" rel="noopener">Open ↗</a>
+            </div>
+            <div class="screen">
+              <iframe
+                src="https://central-finds.vercel.app/"
+                title="Central Finds live preview"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="info">
+            <div>
+              <div class="tag">E-Commerce Website</div>
+              <h3>Central Finds</h3>
+              <p>
+                A modern and responsive e-commerce website built with Angular, designed to provide a
+                smooth and user-friendly shopping experience. The project includes product browsing,
+                product details, wishlist and cart management, checkout flow, order confirmation,
+                and responsive layouts across different screen sizes.
+              </p>
+              <ul class="chips">
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>HTML</li>
+                <li>SCSS</li>
+                <li>RxJS</li>
+                <li>Angular Router</li>
+                <li>REST API</li>
+                <li>Git &amp; GitHub</li>
+                <li>Vercel</li>
+              </ul>
+              <a
+                class="btn p"
+                href="https://central-finds.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                >Live demo →</a
+              >
+            </div>
+            <ul class="feats">
+              <li>Product browsing and detailed product pages</li>
+              <li>Shopping cart with quantity management</li>
+              <li>Wishlist functionality</li>
+              <li>Checkout and order placement flow</li>
+              <li>Form validation and error handling</li>
+              <li>404 Not Found page</li>
+              <li>Responsive and modern UI</li>
+              <li>SEO-friendly page configuration</li>
+              <li>Angular routing and reusable components</li>
+              <li>Persistent cart, wishlist, and theme preferences</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 03 Weather App -->
+        <div class="pn pn3">
+          <div class="browser">
+            <div class="bar">
+              <i></i><i></i><i></i>
+              <span class="url">bassantezzat.github.io/weather</span>
+              <a href="https://bassantezzat.github.io/weather/" target="_blank" rel="noopener"
+                >Open ↗</a
+              >
+            </div>
+            <div class="screen">
+              <iframe
+                src="https://bassantezzat.github.io/weather/"
+                title="Weather App live preview"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="info solo">
+            <div>
+              <div class="tag">Personal project</div>
+              <h3>Weather App</h3>
+              <p>
+                Responsive weather app that pulls live data from an API and shows it in a friendly
+                layout.
+              </p>
+              <ul class="chips">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Weather API</li>
+              </ul>
+              <a
+                class="btn p"
+                href="https://bassantezzat.github.io/weather/"
+                target="_blank"
+                rel="noopener"
+                >Live demo →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 AuthApp -->
+        <div class="pn pn4">
+          <div class="browser">
+            <div class="bar">
+              <i></i><i></i><i></i>
+              <span class="url">auth-app-liard-xi.vercel.app/login</span>
+              <a href="https://auth-app-liard-xi.vercel.app/login" target="_blank" rel="noopener"
+                >Open ↗</a
+              >
+            </div>
+            <div class="screen">
+              <iframe
+                src="https://auth-app-liard-xi.vercel.app/login"
+                title="AuthApp live preview"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="info solo">
+            <div>
+              <div class="tag">Personal project</div>
+              <h3>AuthApp</h3>
+              <p>
+                Angular authentication system with validation, route guards, and a responsive
+                animated UI.
+              </p>
+              <ul class="chips">
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>Route Guards</li>
+                <li>Form Validation</li>
+              </ul>
+              <a
+                class="btn p"
+                href="https://auth-app-liard-xi.vercel.app/login"
+                target="_blank"
+                rel="noopener"
+                >Live demo →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

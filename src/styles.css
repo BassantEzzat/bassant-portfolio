@@ -97,3 +97,258 @@ a {
 .feat + .feat {
   margin-top: 1.5rem;
 }
+
+/* ===== Projects showcase (tabs + live preview) ===== */
+.show {
+  position: relative;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.show > input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.show-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.show-list label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line, #3a3733);
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.show-list label .n {
+  grid-row: span 2;
+  align-self: center;
+  font-family: var(--m, monospace);
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.show-list label b {
+  font-weight: 600;
+}
+
+.show-list label small {
+  font-size: 0.78rem;
+  opacity: 0.65;
+}
+
+.show-list label:hover {
+  transform: translateX(4px);
+  border-color: var(--acc);
+}
+
+/* active tab */
+:is(
+  #p1:checked ~ .show-list label[for='p1'],
+  #p2:checked ~ .show-list label[for='p2'],
+  #p3:checked ~ .show-list label[for='p3'],
+  #p4:checked ~ .show-list label[for='p4']
+) {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+  transform: translateX(6px);
+}
+
+/* keyboard focus */
+:is(
+  #p1:focus-visible ~ .show-list label[for='p1'],
+  #p2:focus-visible ~ .show-list label[for='p2'],
+  #p3:focus-visible ~ .show-list label[for='p3'],
+  #p4:focus-visible ~ .show-list label[for='p4']
+) {
+  outline: 2px solid var(--acc);
+  outline-offset: 3px;
+}
+
+/* panels */
+.pn {
+  display: none;
+}
+
+:is(
+  #p1:checked ~ .show-view .pn1,
+  #p2:checked ~ .show-view .pn2,
+  #p3:checked ~ .show-view .pn3,
+  #p4:checked ~ .show-view .pn4
+) {
+  display: block;
+  animation: showIn 0.45s ease;
+}
+
+@keyframes showIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* browser frame */
+.browser {
+  border: 1px solid var(--line, #3a3733);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card, #1f1d1b);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--line, #3a3733);
+}
+
+.bar i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--line, #3a3733);
+}
+
+.bar i:nth-child(1) {
+  background: #ff5f57;
+}
+.bar i:nth-child(2) {
+  background: #febc2e;
+}
+.bar i:nth-child(3) {
+  background: #28c840;
+}
+
+.bar .url {
+  flex: 1;
+  min-width: 0;
+  margin: 0 0.6rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--mute);
+  font-family: var(--m, monospace);
+  font-size: 0.78rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar a {
+  color: var(--acc);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.screen {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* the site is rendered at 2x width, then scaled down to look like a desktop view */
+.screen iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  border: 0;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+}
+
+/* info under the preview */
+.show .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.show .info.solo {
+  grid-template-columns: 1fr;
+}
+
+.show .info h3 {
+  margin: 0.2rem 0 0.6rem;
+}
+
+.show .feats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.show .feats li {
+  border: 1px solid var(--line, #3a3733);
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .show {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .show-list {
+    flex-direction: row;
+    overflow-x: auto;
+    position: static;
+    padding-bottom: 0.25rem;
+  }
+
+  .show-list label {
+    flex: 0 0 auto;
+  }
+
+  .show .info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .show .feats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pn,
+  .show-list label {
+    animation: none !important;
+    transition: none !important;
+  }
+}
