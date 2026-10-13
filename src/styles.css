@@ -105,6 +105,23 @@ a {
   grid-template-columns: 230px minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* every grid/flex child may shrink: this is what stops the sideways overflow on phones */
+.show > *,
+.pn,
+.browser,
+.show .info,
+.show .info > * {
+  min-width: 0;
+}
+
+.show p,
+.show h3,
+.show li {
+  overflow-wrap: anywhere;
 }
 
 .show > input {
@@ -247,8 +264,9 @@ a {
 }
 
 .bar .url {
-  flex: 1;
+  flex: 1 1 0;
   min-width: 0;
+  max-width: 100%;
   margin: 0 0.6rem;
   padding: 0.25rem 0.8rem;
   border-radius: 999px;
@@ -322,7 +340,7 @@ a {
 
 @media (max-width: 900px) {
   .show {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
   }
 
@@ -330,21 +348,63 @@ a {
     flex-direction: row;
     overflow-x: auto;
     position: static;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.5rem;
+    max-width: 100%;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .show-list::-webkit-scrollbar {
+    display: none;
   }
 
   .show-list label {
     flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .show-list label:hover {
+    transform: none;
+  }
+
+  :is(
+    #p1:checked ~ .show-list label[for='p1'],
+    #p2:checked ~ .show-list label[for='p2'],
+    #p3:checked ~ .show-list label[for='p3'],
+    #p4:checked ~ .show-list label[for='p4'],
+    #p5:checked ~ .show-list label[for='p5']
+  ) {
+    transform: none;
   }
 
   .show .info {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .screen {
+    aspect-ratio: 4 / 3;
   }
 }
 
 @media (max-width: 480px) {
   .show .feats {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bar {
+    padding: 0.5rem 0.65rem;
+  }
+
+  .bar .url {
+    margin: 0 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .show .info .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
 
