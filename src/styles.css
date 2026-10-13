@@ -165,7 +165,8 @@ a {
   #p1:checked ~ .show-list label[for='p1'],
   #p2:checked ~ .show-list label[for='p2'],
   #p3:checked ~ .show-list label[for='p3'],
-  #p4:checked ~ .show-list label[for='p4']
+  #p4:checked ~ .show-list label[for='p4'],
+  #p5:checked ~ .show-list label[for='p5']
 ) {
   background: var(--ink);
   color: var(--bg);
@@ -178,7 +179,8 @@ a {
   #p1:focus-visible ~ .show-list label[for='p1'],
   #p2:focus-visible ~ .show-list label[for='p2'],
   #p3:focus-visible ~ .show-list label[for='p3'],
-  #p4:focus-visible ~ .show-list label[for='p4']
+  #p4:focus-visible ~ .show-list label[for='p4'],
+  #p5:focus-visible ~ .show-list label[for='p5']
 ) {
   outline: 2px solid var(--acc);
   outline-offset: 3px;
@@ -193,7 +195,8 @@ a {
   #p1:checked ~ .show-view .pn1,
   #p2:checked ~ .show-view .pn2,
   #p3:checked ~ .show-view .pn3,
-  #p4:checked ~ .show-view .pn4
+  #p4:checked ~ .show-view .pn4,
+  #p5:checked ~ .show-view .pn5
 ) {
   display: block;
   animation: showIn 0.45s ease;
