@@ -45,7 +45,6 @@ export const FEATURED = {
     'JWT Auth',
     'Cloudinary',
     'Responsive Design',
-    'Dark/Light Mode',
     'Git & GitHub',
     'Vercel',
   ],
