@@ -79,19 +79,23 @@
       <input type="radio" name="proj" id="p3" />
       <input type="radio" name="proj" id="p4" />
       <input type="radio" name="proj" id="p5" />
+      <input type="radio" name="proj" id="p6" />
 
       <div class="show-list" role="group" aria-label="Projects">
         <label for="p1"
           ><span class="n">01</span><b>Voyago</b><small>Graduation project</small></label
         >
-        <label for="p2"><span class="n">02</span><b>Cine</b><small>Movie discovery</small></label>
-        <label for="p3"
-          ><span class="n">03</span><b>Central Finds</b><small>E-commerce</small></label
+        <label for="p2"
+          ><span class="n">02</span><b>Job Tracker</b><small>Productivity app</small></label
         >
+        <label for="p3"><span class="n">03</span><b>Cine</b><small>Movie discovery</small></label>
         <label for="p4"
-          ><span class="n">04</span><b>Weather App</b><small>API project</small></label
+          ><span class="n">04</span><b>Central Finds</b><small>E-commerce</small></label
         >
-        <label for="p5"><span class="n">05</span><b>AuthApp</b><small>Authentication</small></label>
+        <label for="p5"
+          ><span class="n">05</span><b>Weather App</b><small>API project</small></label
+        >
+        <label for="p6"><span class="n">06</span><b>AuthApp</b><small>Authentication</small></label>
       </div>
 
       <div class="show-view">
@@ -131,8 +135,84 @@
           </div>
         </div>
 
-        <!-- 02 Cine -->
+        <!-- 02 Job Application Tracker -->
         <div class="pn pn2">
+          <div class="browser">
+            <div class="bar">
+              <i></i><i></i><i></i>
+              <span class="url">job-application-tracker-sooty-delta.vercel.app</span>
+              <a
+                href="https://job-application-tracker-sooty-delta.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                >Open ↗</a
+              >
+            </div>
+            <div class="screen">
+              <iframe
+                src="https://job-application-tracker-sooty-delta.vercel.app/"
+                title="Job Application Tracker live preview"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="info">
+            <div>
+              <div class="tag">JOB SEARCH TRACKER</div>
+              <h3>Job Application Tracker</h3>
+              <p>
+                A job-search tracker built with Angular 21 and Firebase, with Google sign-in and
+                real-time sync across devices. The project includes a drag-and-drop Kanban board,
+                follow-up reminders with overdue tracking, a dashboard with computed stats, and a
+                responsive, accessible interface backed by 63 unit tests.
+              </p>
+              <ul class="chips">
+                <li>Angular 21</li>
+                <li>TypeScript</li>
+                <li>Signals</li>
+                <li>Firebase Auth</li>
+                <li>Cloud Firestore</li>
+                <li>Angular CDK</li>
+                <li>Vitest</li>
+                <li>Vercel</li>
+              </ul>
+              <div class="btns">
+                <a
+                  class="btn p"
+                  href="https://job-application-tracker-sooty-delta.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  >Live demo →</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/BassantEzzat/job-application-tracker"
+                  target="_blank"
+                  rel="noopener"
+                  >Source code</a
+                >
+              </div>
+              <p class="note">Google sign-in is required to use the live demo.</p>
+            </div>
+            <ul class="feats">
+              <li>Google sign-in with Firebase Authentication</li>
+              <li>Real-time sync across devices</li>
+              <li>Per-user data protected by Firestore security rules</li>
+              <li>Offline support</li>
+              <li>Drag-and-drop Kanban board with optimistic updates</li>
+              <li>Follow-up reminders with overdue tracking</li>
+              <li>Dashboard with computed stats</li>
+              <li>Signals-based store with repository pattern</li>
+              <li>63 unit tests with Vitest, no network needed</li>
+              <li>Table-to-card layout and swipeable board on mobile</li>
+              <li>Accessible UI with reduced-motion support</li>
+              <li>One-time import to migrate local data to the cloud</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 03 Cine -->
+        <div class="pn pn3">
           <div class="browser">
             <div class="bar">
               <i></i><i></i><i></i>
@@ -164,6 +244,7 @@
                 <li>TypeScript</li>
                 <li>RxJS</li>
                 <li>Signals</li>
+                <li>Zoneless</li>
                 <li>SCSS</li>
                 <li>TMDB API</li>
                 <li>REST API</li>
@@ -182,7 +263,7 @@
             <ul class="feats">
               <li>Adaptive color theming from movie posters</li>
               <li>Hero slider with autoplay and swipe support</li>
-              <li>Debounced search with genre filtering</li>
+              <li>Debounced search with genre filtering and pagination</li>
               <li>URL-driven filters and shareable links</li>
               <li>Movie details with cast and trailer modal</li>
               <li>Similar movies recommendations</li>
@@ -196,8 +277,8 @@
           </div>
         </div>
 
-        <!-- 03 Central Finds -->
-        <div class="pn pn3">
+        <!-- 04 Central Finds -->
+        <div class="pn pn4">
           <div class="browser">
             <div class="bar">
               <i></i><i></i><i></i>
@@ -256,8 +337,8 @@
           </div>
         </div>
 
-        <!-- 04 Weather App -->
-        <div class="pn pn4">
+        <!-- 05 Weather App -->
+        <div class="pn pn5">
           <div class="browser">
             <div class="bar">
               <i></i><i></i><i></i>
@@ -279,8 +360,8 @@
               <div class="tag">Personal project</div>
               <h3>Weather App</h3>
               <p>
-                Responsive weather app that pulls live data from an API and shows it in a friendly
-                layout.
+                A responsive weather app that fetches data from a weather API and displays live
+                conditions in a clean interface.
               </p>
               <ul class="chips">
                 <li>HTML</li>
@@ -299,8 +380,8 @@
           </div>
         </div>
 
-        <!-- 05 AuthApp -->
-        <div class="pn pn5">
+        <!-- 06 AuthApp -->
+        <div class="pn pn6">
           <div class="browser">
             <div class="bar">
               <i></i><i></i><i></i>
@@ -312,7 +393,7 @@
             <div class="screen">
               <iframe
                 src="https://auth-app-liard-xi.vercel.app/login"
-                title="AuthApp live preview"
+                title="Authentication app live preview"
                 loading="lazy"
               ></iframe>
             </div>
@@ -320,16 +401,16 @@
           <div class="info solo">
             <div>
               <div class="tag">Personal project</div>
-              <h3>AuthApp</h3>
+              <h3>Authentication &amp; User Management App</h3>
               <p>
-                Angular authentication system with validation, route guards, and a responsive
-                animated UI.
+                A responsive client-side authentication flow with login, registration and form
+                validation, with state management and seamless UI integration.
               </p>
               <ul class="chips">
                 <li>Angular</li>
                 <li>TypeScript</li>
-                <li>Route Guards</li>
                 <li>Form Validation</li>
+                <li>State Management</li>
               </ul>
               <a
                 class="btn p"

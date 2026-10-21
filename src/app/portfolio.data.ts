@@ -12,9 +12,9 @@ export const PROFILE = {
   role: 'Frontend Developer · Angular',
   lead: 'I build clean, responsive interfaces with Angular and TypeScript, and I lead teams that turn ideas into working products.',
   about: [
-    'Recent Information Technology graduate from the Egyptian E-Learning University, in a joint program with Fayoum University.',
-    'I work mainly with Angular, TypeScript and modern CSS, and I enjoy connecting interfaces to REST APIs.',
-    'Strong in OOP, databases and problem-solving, and comfortable leading a team.',
+    'Recent Information Technology graduate with a Bachelor\'s degree in Computers and Information Technology from the Egyptian E-Learning University, in a joint program with Fayoum University.',
+    'I work mainly with Angular and TypeScript, building modern web apps with Signals, zoneless change detection, RxJS, Firebase (Authentication and Firestore) and Vercel serverless proxies, with responsive, unit-tested interfaces.',
+    'I lead development teams and integrate Angular applications with REST APIs, with a strong foundation in OOP, databases and problem-solving.',
   ],
   email: 'bassantromilla@gmail.com',
   phone: '01050840531',
@@ -25,7 +25,7 @@ export const PROFILE = {
 };
 
 export const STATS = [
-  { value: '4+', label: 'projects shipped' },
+  { value: '6', label: 'projects shipped' },
   { value: '1', label: 'team led' },
   { value: '2026', label: 'IT graduate, Honors' },
 ];
@@ -33,7 +33,7 @@ export const STATS = [
 export const FEATURED = {
   tag: 'Graduation project · 2026',
   title: 'Voyago',
-  desc: 'A tourism management and trip planning platform that simplifies planning and booking a trip to Fayoum. I led the team, built the frontend and a complete admin dashboard with Angular 17+, TypeScript, RxJS, Tailwind CSS, JWT authentication and Cloudinary, connected it to the backend team\'s real REST APIs, and deployed it on Vercel with Git & GitHub for team collaboration.',
+  desc: 'A web-based tourism management and trip planning platform that simplifies planning and booking a trip to Fayoum. I led the team, built the responsive user interfaces and integrated them with the backend team\'s REST APIs, and built a complete admin dashboard with Angular Material, Bootstrap and REST APIs to manage users, bookings, content and system configurations.',
   stack: [
     'Angular 17+',
     'TypeScript',
@@ -45,16 +45,18 @@ export const FEATURED = {
     'JWT Auth',
     'Cloudinary',
     'Responsive Design',
+    'Dark/Light Mode',
     'Git & GitHub',
     'Vercel',
   ],
   url: 'https://voyago-gamma.vercel.app/home',
   features: [
     'Hotels & restaurants',
-    'Attractions & tour guides',
+    'Tourist attractions & tour guides',
     'Bookings & payments',
     'Emergency services & budget planner',
-    'Complete admin dashboard with JWT auth and Cloudinary',
+    'Complete admin dashboard for users, bookings, content and system configuration',
+    'JWT authentication and Cloudinary',
     'Responsive design with dark/light mode',
     'Integrated with real backend REST APIs',
     'Team workflow on Git & GitHub, deployed on Vercel',
@@ -64,13 +66,13 @@ export const FEATURED = {
 export const PROJECTS: Project[] = [
   {
     title: 'Weather App',
-    desc: 'Responsive weather app that pulls live data from an API and shows it in a friendly layout.',
+    desc: 'Responsive weather app that fetches data from a weather API and displays live conditions in a clean interface.',
     url: 'https://bassantezzat.github.io/weather/',
     shape: 'circle',
   },
   {
-    title: 'AuthApp',
-    desc: 'Angular authentication system with validation, route guards, and a responsive animated UI.',
+    title: 'Authentication & User Management App',
+    desc: 'Responsive client-side authentication flow with login, registration and form validation, with state management and seamless UI integration.',
     url: 'https://auth-app-liard-xi.vercel.app/login',
     shape: 'square',
   },
@@ -81,37 +83,53 @@ export const SKILLS = [
     title: 'Frontend',
     items: [
       'Angular',
+      'Angular Signals',
+      'Angular CDK (Drag & Drop)',
       'TypeScript',
-      'JavaScript',
+      'JavaScript (ES6+)',
       'HTML5',
       'CSS3',
+      'SCSS',
       'Bootstrap',
       'Tailwind CSS',
       'Angular Material',
+      'RxJS',
+      'Reactive Forms',
+      'Unit Testing (Vitest)',
+      'Dark/Light Theming',
       'Responsive Design',
-    ],
-  },
-  {
-    title: 'Engineering',
-    items: [
-      'OOP',
-      'REST APIs',
-      'Git & GitHub',
-      'Databases',
+      'Performance Optimization',
       'Debugging',
-      'Cross-browser',
-      'Performance',
     ],
   },
   {
-    title: 'Also learning',
-    items: ['Java', 'C++', 'Python', 'Node.js', 'Backend fundamentals'],
+    title: 'Backend & Tools',
+    items: [
+      'REST APIs',
+      'JWT Authentication',
+      'Firebase (Authentication, Cloud Firestore, Security Rules)',
+      'Cloudinary',
+      'Node.js (Beginner)',
+      'Git & GitHub',
+      'Vercel (Serverless Proxy)',
+      'Vitest',
+    ],
+  },
+  {
+    title: 'Languages & Core concepts',
+    items: [
+      'Java',
+      'C++',
+      'Python (Beginner)',
+      'Object-Oriented Programming (OOP)',
+      'Database Fundamentals',
+    ],
   },
 ];
 
 export const DEGREE = {
   title: 'B.Sc. Computers & Information Technology',
-  sub: 'EELU, joint with Fayoum University · 2022 – 2026',
+  sub: 'EELU, joint with Fayoum University · Sep 2022 – Jul 2026',
   note: 'Very Good with Honors · Graduation project: Excellent',
 };
 

@@ -427,9 +427,6 @@ footer {
   color: var(--mute);
 }
 
-/* ===== Animations ===== */
-
-/* ظهور العناصر عند السكرول */
 .reveal {
   opacity: 0;
 }
@@ -448,7 +445,6 @@ footer {
   }
 }
 
-/* دخول الـ Hero عند فتح الصفحة */
 .hero .tag,
 .hero h1,
 .hero .lead,
@@ -521,7 +517,7 @@ footer {
   margin: 0 auto;
   max-width: 300px;
 }
-/* لو الجهاز مظبوط على تقليل الحركة */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
