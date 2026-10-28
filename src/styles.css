@@ -1,11 +1,11 @@
 :root {
-  --bg: #f3efe8;
+  --bg: #f5efe1;
   --card: #e9e3d8;
-  --ink: #1d1b18;
+  --ink: #2a1a0e;
   --mute: #6b655b;
-  --acc: #c4552d;
-  --acc2: #2f5d62;
-  --line: #d6cfc1;
+  --acc: #a98b76;
+  --acc2: #babf94;
+  --line: #cfc6b1;
   --f: 'Bricolage Grotesque', system-ui, sans-serif;
   --m: 'DM Mono', ui-monospace, monospace;
 }
@@ -21,12 +21,12 @@
   }
 }
 :root[data-theme='dark'] {
-  --bg: #1a1917;
+  --bg: #000000;
   --card: #24221f;
-  --ink: #efe9de;
+  --ink: #f5efe1;
   --mute: #a1998b;
-  --acc: #e0714a;
-  --acc2: #7fb0b5;
+  --acc: #caaa98;
+  --acc2: #e1dcc9;
   --line: #36332e;
 }
 html {
