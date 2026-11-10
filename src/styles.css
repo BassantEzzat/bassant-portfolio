@@ -184,7 +184,8 @@ a {
   #p3:checked ~ .show-list label[for='p3'],
   #p4:checked ~ .show-list label[for='p4'],
   #p5:checked ~ .show-list label[for='p5'],
-  #p6:checked ~ .show-list label[for='p6']
+  #p6:checked ~ .show-list label[for='p6'],
+  #p7:checked ~ .show-list label[for='p7']
 ) {
   background: var(--ink);
   color: var(--bg);
@@ -199,7 +200,8 @@ a {
   #p3:focus-visible ~ .show-list label[for='p3'],
   #p4:focus-visible ~ .show-list label[for='p4'],
   #p5:focus-visible ~ .show-list label[for='p5'],
-  #p6:focus-visible ~ .show-list label[for='p6']
+  #p6:focus-visible ~ .show-list label[for='p6'],
+  #p7:focus-visible ~ .show-list label[for='p7']
 ) {
   outline: 2px solid var(--acc);
   outline-offset: 3px;
@@ -216,7 +218,8 @@ a {
   #p3:checked ~ .show-view .pn3,
   #p4:checked ~ .show-view .pn4,
   #p5:checked ~ .show-view .pn5,
-  #p6:checked ~ .show-view .pn6
+  #p6:checked ~ .show-view .pn6,
+  #p7:checked ~ .show-view .pn7
 ) {
   display: block;
   animation: showIn 0.45s ease;
@@ -377,7 +380,8 @@ a {
     #p3:checked ~ .show-list label[for='p3'],
     #p4:checked ~ .show-list label[for='p4'],
     #p5:checked ~ .show-list label[for='p5'],
-    #p6:checked ~ .show-list label[for='p6']
+    #p6:checked ~ .show-list label[for='p6'],
+    #p7:checked ~ .show-list label[for='p7']
   ) {
     transform: none;
   }

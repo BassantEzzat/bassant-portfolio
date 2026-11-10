@@ -13,7 +13,7 @@ export const PROFILE = {
   lead: 'I build clean, responsive interfaces with Angular and TypeScript, and I lead teams that turn ideas into working products.',
   about: [
     'Recent Information Technology graduate with a Bachelor\'s degree in Computers and Information Technology from the Egyptian E-Learning University, in a joint program with Fayoum University.',
-    'I work mainly with Angular and TypeScript, building modern web apps with Signals, zoneless change detection, RxJS, Firebase (Authentication and Firestore) and Vercel serverless proxies, with responsive, unit-tested interfaces.',
+    'I work mainly with Angular and TypeScript, building modern web apps with Signals, zoneless change detection, RxJS, Firebase (Authentication and Firestore), Three.js for 3D on the web, and Vercel serverless proxies, with responsive, unit-tested interfaces.',
     'I lead development teams and integrate Angular applications with REST APIs, with a strong foundation in OOP, databases and problem-solving.',
   ],
   email: 'bassantromilla@gmail.com',
@@ -25,7 +25,7 @@ export const PROFILE = {
 };
 
 export const STATS = [
-  { value: '6', label: 'projects shipped' },
+  { value: '7', label: 'projects shipped' },
   { value: '1', label: 'team led' },
   { value: '2026', label: 'IT graduate, Honors' },
 ];
@@ -95,6 +95,7 @@ export const SKILLS = [
       'Angular Material',
       'RxJS',
       'Reactive Forms',
+      'Three.js (WebGL)',
       'Unit Testing (Vitest)',
       'Dark/Light Theming',
       'Responsive Design',

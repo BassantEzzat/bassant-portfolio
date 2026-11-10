@@ -78,6 +78,7 @@
       <input type="radio" name="proj" id="p4" />
       <input type="radio" name="proj" id="p5" />
       <input type="radio" name="proj" id="p6" />
+      <input type="radio" name="proj" id="p7" />
 
       <div class="show-list" role="group" aria-label="Projects">
         <label for="p1"
@@ -86,14 +87,15 @@
         <label for="p2"
           ><span class="n">02</span><b>Job Tracker</b><small>Productivity app</small></label
         >
-        <label for="p3"><span class="n">03</span><b>Cine</b><small>Movie discovery</small></label>
+        <label for="p7"><span class="n">03</span><b>MODEXA3D</b><small>3D viewer</small></label>
+        <label for="p3"><span class="n">04</span><b>Cine</b><small>Movie discovery</small></label>
         <label for="p4"
-          ><span class="n">04</span><b>Central Finds</b><small>E-commerce</small></label
+          ><span class="n">05</span><b>Central Finds</b><small>E-commerce</small></label
         >
         <label for="p5"
-          ><span class="n">05</span><b>Weather App</b><small>API project</small></label
+          ><span class="n">06</span><b>Weather App</b><small>API project</small></label
         >
-        <label for="p6"><span class="n">06</span><b>AuthApp</b><small>Authentication</small></label>
+        <label for="p6"><span class="n">07</span><b>AuthApp</b><small>Authentication</small></label>
       </div>
 
       <div class="show-view">
@@ -418,6 +420,85 @@
                 >Live demo →</a
               >
             </div>
+          </div>
+        </div>
+
+        <!-- 03 MODEXA3D (shown third in the list, panel 7 in the code) -->
+        <div class="pn pn7">
+          <div class="browser">
+            <div class="bar">
+              <i></i><i></i><i></i>
+              <span class="url">modexa3d.vercel.app/?demo=1</span>
+              <a href="https://modexa3d.vercel.app/?demo=1" target="_blank" rel="noopener"
+                >Open ↗</a
+              >
+            </div>
+            <div class="screen">
+              <iframe
+                src="https://modexa3d.vercel.app/?demo=1"
+                title="MODEXA3D live preview"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="info">
+            <div>
+              <div class="tag">3D VIEWER &amp; CUSTOMIZER</div>
+              <h3>MODEXA3D — 3D Model Viewer</h3>
+              <p>
+                A 3D model viewer and customizer built with Angular and Three.js. Users open GLB or
+                FBX files, edit every material in real time, measure and annotate the model, compare
+                before and after, and export the result. Google sign-in with an allowed-emails list
+                protects the app, and saved designs sync across devices through Firebase.
+              </p>
+              <ul class="chips">
+                <li>Angular</li>
+                <li>TypeScript</li>
+                <li>Three.js</li>
+                <li>WebGL</li>
+                <li>Signals</li>
+                <li>Firebase Auth</li>
+                <li>Cloud Firestore</li>
+                <li>IndexedDB</li>
+                <li>Vercel</li>
+              </ul>
+              <div class="btns">
+                <a
+                  class="btn p"
+                  href="https://modexa3d.vercel.app/?demo=1"
+                  target="_blank"
+                  rel="noopener"
+                  >Live demo →</a
+                >
+                <a
+                  class="btn"
+                  href="https://github.com/BassantEzzat/modexa3d"
+                  target="_blank"
+                  rel="noopener"
+                  >Source code</a
+                >
+              </div>
+              <p class="note">
+                This site is private and requires access through an authorized email address. If you
+                don't have access yet, Message me and I will add yours.
+              </p>
+            </div>
+            <ul class="feats">
+              <li>Opens GLB and FBX models up to 500 MB, by upload or drag and drop</li>
+              <li>Live editing of color, roughness, metalness, opacity, glow and clearcoat</li>
+              <li>Lighting presets with brightness, direction and background color</li>
+              <li>Undo and redo for every edit</li>
+              <li>Before and after comparison slider</li>
+              <li>Two-point distance measuring with a size readout in m, cm, mm and inches</li>
+              <li>Notes pinned to points on the model</li>
+              <li>Show or hide individual parts of the model</li>
+              <li>GLB animation playback with speed and loop controls</li>
+              <li>GLB export, PNG screenshots up to 4096 px, turntable video recording</li>
+              <li>Saved designs kept on the device with IndexedDB, including uploaded models</li>
+              <li>Google sign-in with Firestore security rules and cross-device sync</li>
+              <li>English and Arabic interface with RTL, dark and light theme</li>
+              <li>Responsive layout with a mobile bottom sheet</li>
+            </ul>
           </div>
         </div>
       </div>
